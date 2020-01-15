@@ -29,6 +29,7 @@ end
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
   row_index = 0 
+  result = {}
   while row_index < nds.length do 
     total = 0
     column_index = 0 
