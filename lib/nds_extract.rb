@@ -28,5 +28,20 @@ end
 #
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
-  
+  row_index = 0 
+  while row_index < nds.length do 
+    total = 0
+    column_index = 0 
+    director_name = nds[row_index][:name]
+    movies = nds[row_index][:movies]
+    while column_index < movies.length do 
+      total += movies[column_index][:worldwide_gross]
+      column_index += 1
+      
+    end
+    result[director_name] = total
+    row_index += 1
+  end
+  result
+
 end
